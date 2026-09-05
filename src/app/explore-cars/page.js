@@ -15,7 +15,7 @@ export default function ExploreCarsPage() {
     const params = new URLSearchParams();
     if (searchVal) params.append('search', searchVal);
     if (typeVal) params.append('type', typeVal);
-    fetch(`http://localhost:5000/cars?${params.toString()}`)
+    fetch(`https://drivefleet-server-hvcw.onrender.com/cars?${params.toString()}`)
       .then((res) => res.json())
       .then((data) => { setCars(Array.isArray(data) ? data : []); setLoading(false); })
       .catch(() => setLoading(false));
