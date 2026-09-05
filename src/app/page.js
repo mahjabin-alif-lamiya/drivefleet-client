@@ -67,14 +67,7 @@ export default function HomePage() {
         <div className="absolute -bottom-24 -right-24 w-96 h-96 bg-indigo-400/20 dark:bg-blue-500/10 rounded-full blur-3xl animate-float-slow z-0"></div>
 
         <div className="relative z-10 max-w-6xl mx-auto px-4 py-28 text-center">
-          <div className="flex flex-wrap justify-center gap-3 mb-6">
-            <span className="inline-flex items-center gap-2 bg-white/15 backdrop-blur px-4 py-1.5 rounded-full text-sm font-medium">
-              <Sparkles size={14} /> Premium Fleet
-            </span>
-            <span className="inline-flex items-center gap-2 bg-white/15 backdrop-blur px-4 py-1.5 rounded-full text-sm font-medium">
-              <PhoneCall size={14} /> 24/7 Roadside Assist
-            </span>
-          </div>
+          
           <h1 className="text-4xl md:text-6xl font-extrabold mb-5 leading-tight">
             Find Your Perfect Ride
           </h1>
