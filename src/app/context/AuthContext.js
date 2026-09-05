@@ -10,7 +10,7 @@ export function AuthProvider({ children }) {
 
   const fetchUser = async () => {
     try {
-      const res = await fetch('http://localhost:5000/me', {
+      const res = await fetch('https://drivefleet-server-hvcw.onrender.com/me', {
         credentials: 'include',
       });
       if (res.ok) {
@@ -31,7 +31,7 @@ export function AuthProvider({ children }) {
   }, []);
 
   const login = async (email, password) => {
-    const res = await fetch('http://localhost:5000/login', {
+    const res = await fetch('https://drivefleet-server-hvcw.onrender.com/login', {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
       credentials: 'include',
@@ -45,7 +45,7 @@ export function AuthProvider({ children }) {
   };
 
   const logout = async () => {
-    await fetch('http://localhost:5000/logout', {
+    await fetch('https://drivefleet-server-hvcw.onrender.com/logout', {
       method: 'POST',
       credentials: 'include',
     });
