@@ -18,7 +18,7 @@ export default function CarDetailsPage() {
   const [submitting, setSubmitting] = useState(false);
 
   useEffect(() => {
-    fetch(`http://localhost:5000/cars/${id}`)
+    fetch(`https://drivefleet-server-hvcw.onrender.com/cars/${id}`)
       .then((res) => res.json())
       .then((data) => { setCar(data); setLoading(false); })
       .catch(() => setLoading(false));
@@ -34,7 +34,7 @@ export default function CarDetailsPage() {
     setSubmitting(true);
     setMessage('');
     try {
-      const res = await fetch('http://localhost:5000/bookings', {
+      const res = await fetch('https://drivefleet-server-hvcw.onrender.com/bookings', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         credentials: 'include',
