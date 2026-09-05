@@ -9,7 +9,7 @@ export default function MyBookingsPage() {
   const [loading, setLoading] = useState(true);
 
   useEffect(() => {
-    fetch('http://localhost:5000/my-bookings', { credentials: 'include' })
+    fetch('https://drivefleet-server-hvcw.onrender.com/my-bookings', { credentials: 'include' })
       .then((res) => res.json())
       .then((data) => { setBookings(Array.isArray(data) ? data : []); setLoading(false); })
       .catch(() => setLoading(false));
