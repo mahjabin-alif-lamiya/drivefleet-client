@@ -18,7 +18,7 @@ export default function AddCarPage() {
     setLoading(true);
     setMessage('');
     try {
-      const res = await fetch('http://localhost:5000/cars', {
+      const res = await fetch('https://drivefleet-server-hvcw.onrender.com/cars', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         credentials: 'include',
