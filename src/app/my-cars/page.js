@@ -10,7 +10,7 @@ export default function MyCarsPage() {
   const [deleteId, setDeleteId] = useState(null);
 
   const fetchCars = () => {
-    fetch('http://localhost:5000/my-cars', { credentials: 'include' })
+    fetch('https://drivefleet-server-hvcw.onrender.com/my-cars', { credentials: 'include' })
       .then((res) => res.json())
       .then((data) => { setCars(Array.isArray(data) ? data : []); setLoading(false); })
       .catch(() => setLoading(false));
@@ -19,7 +19,7 @@ export default function MyCarsPage() {
   useEffect(() => { fetchCars(); }, []);
 
   const confirmDelete = async () => {
-    await fetch(`http://localhost:5000/cars/${deleteId}`, { method: 'DELETE', credentials: 'include' });
+    await fetch(`https://drivefleet-server-hvcw.onrender.com/cars/${deleteId}`, { method: 'DELETE', credentials: 'include' });
     setDeleteId(null);
     fetchCars();
   };
